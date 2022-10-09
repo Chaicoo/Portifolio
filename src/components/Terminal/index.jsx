@@ -9,7 +9,7 @@ const Terminal = () => {
         <div id="green"></div>
       </div>
       <div id="screen">
-        <p class="font"><span>francisco</span>@10.0.0.1:~$ </p>
+        <p class="font"><span>francisco</span>@10.0.0.1:~$ <span>cd</span> boasVindas</p>
         <p class="font"><span>francisco</span>@10.0.0.1:~$ <span>ls</span></p>
         <p class="font">readme.md   index.html</p>
         <p class="font"><span>francisco</span>@10.0.0.1:~$ <span>cat</span> readme.md</p>

@@ -11,11 +11,18 @@ export default  createGlobalStyle`
     } 
     .container {
         margin: auto;
-        width: 80%;        
-        padding: 10px;
+        width: 100%;        
         text-align: center;
         
     }
+
+    .limitWidth {
+        max-width: 80%;
+        text-align: center;
+        margin: auto;
+        margin-top: 10%;
+    }
+
     body {
         background: ${(props) => props.theme.background};
         color: ${props => props.theme.text};        
@@ -79,6 +86,48 @@ export default  createGlobalStyle`
     .terminal {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         border-radius: 5px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about{
+        text-align: center;
+        }
+
+    .about h2 {
+        color: ${props => props.theme.accent};
+        font-size: 60px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about p {
+        color: ${props => props.theme.secundaryText};
+        font-size: 30px;
+        text-align: justify;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .skills h2 {
+        color: ${props => props.theme.accent};
+        font-size: 60px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
     }
 
     footer{
