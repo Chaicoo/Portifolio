@@ -1,17 +1,14 @@
 import React from "react";
-import "./skill.css";
+import SkillStyle from "./skillStyle";
 
 const Skill = (props) => {
   return (
-    <div className="card">
-      <div className="card-icon">
-        <i className={props.icon}></i>
+    <SkillStyle>
+      <div className="skill">
+        <p className="skillTitle">{props.title}</p>
+        <div className="skillIcon">{props.icon}</div>
       </div>
-      <div className="card-content">
-        <h3>{props.title}</h3>
-        <p>{props.description}</p>
-      </div>
-    </div>
+    </SkillStyle>
   );
 };
 

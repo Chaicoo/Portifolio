@@ -9,7 +9,9 @@ const HomeStyle = styled.div`
   }
 
   .containerTitle {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     box-sizing: content-box;
   }
 
@@ -47,6 +49,35 @@ const HomeStyle = styled.div`
     text-align: left;
   }
 
+  .containerButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .containerButtons .buttonLink {
+    background-color: ${(props) => props.theme.accent};
+    color: ${(props) => props.theme.text};
+    border: none;
+    border-radius: 28px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 30px;
+    text-decoration: none;
+    &:hover {
+      background-color: ${(props) => props.theme.text};
+      color: ${(props) => props.theme.accent};
+    }
+  }
+
+  .containerButtons .button:hover {
+    color: ${(props) => props.theme.text};
+  }
+
   .accent {
     background-color: ${(props) => props.theme.accent};
     color: ${(props) => props.theme.text};
@@ -67,6 +98,7 @@ const HomeStyle = styled.div`
 
   .about {
     text-align: center;
+    flex-wrap: wrap;
   }
 
   .about h2 {
@@ -120,6 +152,14 @@ const HomeStyle = styled.div`
     font-weight: 700;
     margin: 0;
     padding: 0;
+  }
+
+  .skills .containerSkills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   footer {

@@ -13,7 +13,17 @@ import {
   FiMail,
   FiGithub,
 } from "react-icons/fi";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3,
+  FaFigma,
+  SiJavascript,
+} from "react-icons/all";
 import Terminal from "./components/Terminal";
+import Button from "./components/Button";
+import Skill from "./components/Skill";
+import AnchorLink from "react-anchor-link-smooth-scroll-v2";
 
 function Home() {
   const [isLightTheme, setIsLightTheme] = useState(false);
@@ -31,7 +41,7 @@ function Home() {
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
       <HomeStyle>
-        <div className="container" id="start">
+        <div className="container">
           <GlobalStyles />
           <header id="header" className="limitWidth">
             <div className="containerTitle">
@@ -45,6 +55,12 @@ function Home() {
                 Olá, me chamo Francisco Gabriel e sou desenvolvedor Jr
                 Front-end.
               </p>
+              <div className="containerButtons">
+                <AnchorLink href="#about" className="buttonLink">
+                  Mais sobre mim
+                </AnchorLink>
+                <Button className="button">Baixar currículo</Button>
+              </div>
             </div>
             <div className="terminal">
               <Terminal />
@@ -70,22 +86,28 @@ function Home() {
 
             <div className="skills" id="skills">
               <h2 className="title">Conhecimentos</h2>
-              <div className="containerSkills"></div>
+              <div className="containerSkills">
+                <Skill icon={<FaHtml5 />} title="HTML" />
+                <Skill icon={<FaCss3 />} title="CSS" />
+                <Skill icon={<SiJavascript />} title="JavaScript" />
+                <Skill icon={<FaReact />} title="ReactJS" />
+                <Skill icon={<FaFigma />} title="Figma" />
+              </div>
             </div>
           </main>
           <footer>
             <ul className="linksOnpage">
               <li>
-                <a href="#start">Início</a>
+                <AnchorLink href="#root">Início</AnchorLink>
               </li>
               <li>
-                <a href="#about">Sobre</a>
+                <AnchorLink href="#about">Sobre</AnchorLink>
               </li>
               <li>
-                <a href="#skills">Conhecimentos</a>
+                <AnchorLink href="#skills">Conhecimentos</AnchorLink>
               </li>
               <li>
-                <a href="#projects">Projetos</a>
+                <AnchorLink href="#projects">Projetos</AnchorLink>
               </li>
             </ul>
 
@@ -106,7 +128,6 @@ function Home() {
                 <FiMail />
               </a>
             </div>
-
             <p className="copyRight">
               © 2022 Francisco Gabriel. Todos os direitos reservados.
             </p>

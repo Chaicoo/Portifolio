@@ -1,4 +1,4 @@
-import TerminalStyle from "./terminal";
+import TerminalStyle from "./terminalStyle";
 
 const Terminal = () => {
   return (
