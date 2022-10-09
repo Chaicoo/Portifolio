@@ -143,7 +143,14 @@ const HomeStyle = styled.div`
     justify-content: center;
     margin-top: 10%;
     width: 100%;
+    height: 660px;
     text-align: center;
+    background-image: url("https://github.com/Chaicoo/Portifolio/blob/main/src/assets/bgSkill.jpg?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
   }
 
   .skills h2 {

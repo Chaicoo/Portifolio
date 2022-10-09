@@ -99,7 +99,7 @@ function Home() {
               <h2 className="title" data-aos="fade-up">
                 Conhecimentos
               </h2>
-              <div className="containerSkills" data-aos="zoom-in">
+              <div className="containerSkills" data-aos="zoom-out">
                 <Skill icon={<FaHtml5 />} title="HTML" />
                 <Skill icon={<FaCss3 />} title="CSS" />
                 <Skill icon={<SiJavascript />} title="JavaScript" />
