@@ -16,7 +16,7 @@ const SkillStyle = styled.div`
     .skillTitle {
         font-size: 30px;
         font-weight: 700;
-        color: ${(props) => props.theme.text};
+        color: ${(props) => props.theme.textSkill};
     }
 
     .skillIcon {
