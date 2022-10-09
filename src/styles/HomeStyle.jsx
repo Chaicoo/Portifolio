@@ -145,7 +145,7 @@ const HomeStyle = styled.div`
     width: 100%;
     height: 660px;
     text-align: center;
-    background-image: url("https://github.com/Chaicoo/Portifolio/blob/main/src/assets/bgSkill.jpg?raw=true");
+    background-image: url(${(props) => props.theme.bg});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

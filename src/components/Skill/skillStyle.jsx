@@ -11,7 +11,6 @@ const SkillStyle = styled.div`
         height: 200px;
         border-radius: 10px;
         transition: 0.5s;
-        cursor: pointer;
     }
 
     .skillTitle {
@@ -24,6 +23,7 @@ const SkillStyle = styled.div`
         font-size: 80px;
         color: ${(props) => props.theme.accent};
         transition: 0.9s;
+        cursor: pointer;
 
     }
 
