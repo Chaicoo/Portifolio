@@ -1,5 +1,5 @@
 import styled from "styled-components";
-//deixar o botao translucidado e com borda
+
 const ButtonStyle = styled.div`
   .button {
     background: none;

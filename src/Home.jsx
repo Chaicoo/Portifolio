@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-no-target-blank */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styles/theme";
 import GlobalStyles from "./styles/globalStyles";
@@ -24,6 +24,8 @@ import Terminal from "./components/Terminal";
 import Button from "./components/Button";
 import Skill from "./components/Skill";
 import AnchorLink from "react-anchor-link-smooth-scroll-v2";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
   const [isLightTheme, setIsLightTheme] = useState(false);
@@ -37,6 +39,10 @@ function Home() {
       setIcon(<FiMoon />);
     }
   };
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
 
   return (
     <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
@@ -69,10 +75,15 @@ function Home() {
 
           <main>
             <div className="about limitWidth" id="about">
-              <h2 className="title">Sobre mim</h2>
+              <h2 className="title" data-aos="zoom-in">
+                Sobre mim
+              </h2>
               <div className="aboutContent">
-                <img src="https://github.com/Chaicoo.png" />
-                <p className="text">
+                <img
+                  src="https://github.com/Chaicoo.png"
+                  data-aos="fade-right"
+                />
+                <p className="text" data-aos="fade-left">
                   Tenho 20 anos, e estudo tecnologia desde os 15, quando
                   ingressei num Instituo Federal, onde fiz um curso técnico em
                   redes de computadores e resolvi seguir a carreia de DEV,
@@ -85,14 +96,23 @@ function Home() {
             </div>
 
             <div className="skills" id="skills">
-              <h2 className="title">Conhecimentos</h2>
-              <div className="containerSkills">
+              <h2 className="title" data-aos="fade-up">
+                Conhecimentos
+              </h2>
+              <div className="containerSkills" data-aos="zoom-in">
                 <Skill icon={<FaHtml5 />} title="HTML" />
                 <Skill icon={<FaCss3 />} title="CSS" />
                 <Skill icon={<SiJavascript />} title="JavaScript" />
                 <Skill icon={<FaReact />} title="ReactJS" />
                 <Skill icon={<FaFigma />} title="Figma" />
               </div>
+            </div>
+
+            <div className="projects" id="projects">
+              <h2 className="title" data-aos="fade-up">
+                Projetos
+              </h2>
+              <div className="containerProjects" data-aos="zoom-in"></div>
             </div>
           </main>
           <footer>

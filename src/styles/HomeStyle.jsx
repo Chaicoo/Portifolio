@@ -160,6 +160,24 @@ const HomeStyle = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 5%;
+  }
+
+  .projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .projects h2 {
+    color: ${(props) => props.theme.accent};
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
   }
 
   footer {
