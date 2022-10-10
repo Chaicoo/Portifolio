@@ -28,11 +28,31 @@ const SkillStyle = styled.div`
     }
 
     .skillIcon:hover {
-        color: ${(props) => props.theme.text};
+        color: ${(props) => props.theme.textSkill};
         transform: scale(0.7);
 
     }
 
+    @media (max-width: 768px){
+        .skill {
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width: 425px){
+        .skill {
+            margin-top: 10px;
+            width: 150px;
+        }
+
+        .skillTitle {
+            font-size: 20px;
+        }
+
+        .skillIcon {
+            font-size: 50px;
+        }
+    }
 
 `;
 

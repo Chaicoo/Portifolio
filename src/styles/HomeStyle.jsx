@@ -12,7 +12,6 @@ const HomeStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-sizing: content-box;
   }
 
   .containerTitle .buttonTheme {
@@ -98,7 +97,6 @@ const HomeStyle = styled.div`
 
   .about {
     text-align: center;
-    flex-wrap: wrap;
   }
 
   .about h2 {
@@ -114,6 +112,9 @@ const HomeStyle = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
   }
 
   .about .aboutContent img {
@@ -122,19 +123,12 @@ const HomeStyle = styled.div`
     margin-right: 70px;
     padding: 3px;
     border: 3px solid ${(props) => props.theme.accent};
-    @media (max-width: 768px) {
-      width: 300px;
-      margin-right: 0;
-    }
   }
 
   .about p {
     color: ${(props) => props.theme.secundaryText};
     font-size: 25px;
     text-align: justify;
-    @media (max-width: 768px) {
-      width: 300px;
-    }
   }
 
   .skills {
@@ -150,7 +144,6 @@ const HomeStyle = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    
   }
 
   .skills h2 {
@@ -170,7 +163,7 @@ const HomeStyle = styled.div`
     margin-top: 5%;
   }
 
-  .projects{
+  .projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,17 +239,127 @@ const HomeStyle = styled.div`
   .copyRight {
     color: ${(props) => props.theme.secundaryText};
     font-size: 20px;
-    padding-bottom: 30px;
-  }
-
-  .Cursor {
-    color: transparent;
+    margin-bottom: 30px;
   }
 
   @media (max-width: 768px) {
     header {
+      height: 100vh;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+    }
+
+    .containerTitle {
+      margin-top: 10px;
+      align-items: center;
+      margin-bottom: -130px;
+    }
+
+    .containerTitle h1 {
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .containerTitle .text {
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .containerTitle .buttonTheme {
+      font-size: 35px;
+    }
+
+    .containerButtons {
+      align-items: center;
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+
+    .terminal {
+      width: 370px;
+      height: 200px;
+    }
+
+    main {
+      margin-top: 20px;
+    }
+
+    .about {
+      margin-top: 10px;
+    }
+
+    .about h2 {
+      font-size: 50px;
+    }
+
+    .about .aboutContent {
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
-      margin-top: 30%;
+    }
+
+    .about .aboutContent img {
+      width: 300px;
+      margin-right: 0;
+    }
+
+    .about p {
+      font-size: 18px;
+    }
+
+    .skills {
+      margin-top: 40px;
+      height: 900px;
+    }
+
+    .skills h2 {
+      font-size: 50px;
+    }
+
+    .skills .containerSkills {
+      margin-top: 10px;
+    }
+
+    .projects {
+      margin-top: 40px;
+    }
+
+    .projects h2 {
+      font-size: 50px;
+    }
+
+    footer {
+      margin-top: 40px;
+      height: 200px;
+    }
+
+    .linksOnpage {
+      margin-top: 20px;
+    }
+
+    .linksOnpage li {
+      margin: 0 20px;
+    }
+
+    .linksOnpage li a {
+      font-size: 18px;
+    }
+
+    .socialMedia {
+      margin-top: 15px;
+    }
+
+    .socialMedia a {
+      margin: 0 20px;
+    }
+
+    .copyRight {
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
 `;
