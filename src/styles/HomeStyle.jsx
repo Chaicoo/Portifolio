@@ -284,7 +284,7 @@ const HomeStyle = styled.div`
     }
 
     main {
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     .about {
@@ -368,7 +368,7 @@ const HomeStyle = styled.div`
       width: 100%;
       justify-content: center;
       align-items: center;
-      margin-top: -30%;
+      margin-top: 10%;
     }
 
     .containerTitle {
@@ -399,7 +399,7 @@ const HomeStyle = styled.div`
       align-items: center;
       width: 90vw;
       margin-top: 15px;
-      margin-bottom: -110%;
+      margin-bottom: 10%;
     }
 
     .containerButtons .buttonLink{
@@ -407,13 +407,9 @@ const HomeStyle = styled.div`
       font-size: 14px;
     }
 
-    .terminal {
-      width: 280px;
-      height: 130px;
-    }
 
     main {
-      margin-top: -20%;
+      margin-top: 20%;
     }
 
     .about {
