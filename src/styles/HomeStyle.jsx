@@ -245,7 +245,6 @@ const HomeStyle = styled.div`
 
   @media (max-width: 768px) {
     header {
-      height: 100vh;
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
@@ -413,7 +412,7 @@ const HomeStyle = styled.div`
     }
 
     main {
-      margin-top: 20%;
+      margin-top: 10%;
     }
 
     .about {
