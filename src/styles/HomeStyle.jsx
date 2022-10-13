@@ -256,7 +256,6 @@ const HomeStyle = styled.div`
     .containerTitle {
       margin-top: 10px;
       align-items: center;
-      margin-bottom: -130px;
     }
 
     .containerTitle h1 {
@@ -406,6 +405,11 @@ const HomeStyle = styled.div`
     .containerButtons .buttonLink{
       margin: 0 10px;
       font-size: 14px;
+    }
+
+    .terminal {
+      width: 280px;
+      height: 130px;
     }
 
     main {
