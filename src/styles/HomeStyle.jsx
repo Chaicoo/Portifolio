@@ -4,7 +4,6 @@ const HomeStyle = styled.div`
   header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin-top: 10%;
   }
 
@@ -12,6 +11,7 @@ const HomeStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 50%;
   }
 
   .containerTitle .buttonTheme {
@@ -129,6 +129,7 @@ const HomeStyle = styled.div`
     color: ${(props) => props.theme.secundaryText};
     font-size: 25px;
     text-align: justify;
+    width: 85%;
   }
 
   .skills {

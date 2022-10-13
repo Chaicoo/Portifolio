@@ -11,11 +11,11 @@ export default createGlobalStyle`
     } 
     .container {
         margin: auto;
-        width: 100%;        
+        width: 100%;
         text-align: center;
-        
+        overflow-x: hidden;
     }
-
+    
     .limitWidth {
         max-width: 80%;
         text-align: center;
