@@ -363,6 +363,125 @@ const HomeStyle = styled.div`
       margin-bottom: 10px;
     }
   }
+
+  @media (max-width: 425px) {
+    header {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-top: -30%;
+    }
+
+    .containerTitle {
+      margin-top: 10px;
+      align-items: center;
+    }
+    
+    .containerTitle h1 {
+      flex-direction: row;
+      font-size: 40px;
+      text-align: center;
+      width: 80vw;
+    }
+
+    .containerTitle .text {
+      font-size: 15px;
+      text-align: justify;
+      width: 80vw;
+    }
+
+    .containerTitle .buttonTheme {
+      font-size: 30px;
+    }
+
+    .containerButtons {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      width: 90vw;
+      margin-top: 15px;
+      margin-bottom: -110%;
+    }
+
+    .containerButtons .buttonLink{
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    main {
+      margin-top: -20%;
+    }
+
+    .about {
+      margin-top: 10px;
+    }
+
+    .about h2 {
+      font-size: 40px;
+    }
+
+    .about .aboutContent {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .about .aboutContent img {
+      width: 250px;
+      margin-right: 0;
+    }
+
+    .about p {
+      font-size: 15px;
+    }
+
+    .skills {
+      margin-top: 80px;
+      height: 900px;
+    }
+
+    .skills h2 {
+      font-size: 40px;
+    }
+
+    .skills .containerSkills {
+      margin-top: 10px;
+    }
+
+    .projects {
+      margin-top: 40px;
+    }
+
+    .projects h2 {
+      font-size: 40px;
+    }
+
+    footer {
+      margin-top: 40px;
+      height: 200px;
+    }
+
+    .linksOnpage {
+      margin-top: 20px;
+    }
+
+    .linksOnpage li {
+      margin: 0 15px;
+      font-size: 15px;
+    }
+
+    .linksOnpage li a {
+      font-size: 15px;
+    }
+
+    .socialMedia {
+      margin-top: 15px;
+    }
+
+    .copyRight{
+      font-size: 14px;
+    }
+  }
 `;
 
 export default HomeStyle;

@@ -15,6 +15,19 @@ const ButtonStyle = styled.div`
   .button:hover {
     background: ${(props) => props.theme.accent};
   }
+
+  @media (max-width: 768px) {
+    .button {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .button {
+      margin: 0 10px;
+      font-size: 14px;
+    }
+  }
 `;
 
 export default ButtonStyle;
