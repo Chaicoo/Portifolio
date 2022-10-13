@@ -94,6 +94,33 @@ const TerminalStyle = styled.div`
     #green {
       right: -36%;
     }
+  }
+
+  @media (max-width: 425px) {
+    #bar {
+      width: 300px;
+    }
+
+    #screen {
+      width: 300px;
+      height: 150px;
+    }
+
+    .font {
+      font-size: 12px;
+    }
+
+    #red {
+      right: -46%;
+    }
+
+    #yellow {
+      right: -40%;
+    }
+
+    #green {
+      right: -34%;
+    }
 
   }
 `;

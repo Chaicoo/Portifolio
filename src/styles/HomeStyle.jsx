@@ -378,7 +378,7 @@ const HomeStyle = styled.div`
     
     .containerTitle h1 {
       flex-direction: row;
-      font-size: 40px;
+      font-size: 35px;
       text-align: center;
       width: 80vw;
     }
@@ -407,6 +407,10 @@ const HomeStyle = styled.div`
       font-size: 14px;
     }
 
+    .terminal {
+      width: 300px;
+      height: 150px;
+    }
 
     main {
       margin-top: 20%;
