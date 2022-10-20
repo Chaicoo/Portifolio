@@ -1,35 +1,42 @@
 import styled from "styled-components";
 
 const HomeStyle = styled.div`
-  header {
+  nav{
+    height: 4.5rem;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur( 30px );
+    border-bottom: 1px solid ${(props) => props.theme.accent};
+  }
+  
+  .navbar{
     display: flex;
-    flex-direction: row;
-    margin-top: 10%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    margin: 0 auto;
+    height: 100%;
   }
 
-  .containerTitle {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
-  }
-
-  .containerTitle .buttonTheme {
+  .navbar .buttonTheme {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 50px;
+    font-size: 35px;
     color: ${(props) => props.theme.text};
     margin-left: 10px;
   }
 
-  .containerTitle button:hover {
+  .navbar button:hover {
     color: ${(props) => props.theme.accent};
   }
 
-  .containerTitle h1 {
+  .navbar h2 {
     color: ${(props) => props.theme.titles};
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     justify-content: center;
     margin: 0;
@@ -38,8 +45,38 @@ const HomeStyle = styled.div`
     text-align: left;
   }
 
-  .titleSecondary {
+  .navbar .titleSecondary {
     color: ${(props) => props.theme.accent};
+  }
+
+  .navbar a {
+    background-color: ${(props) => props.theme.accent};
+    color: ${(props) => props.theme.text};
+    border: none;
+    border-radius: 28px;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 30px;
+    text-decoration: none;
+    &:hover {
+      background-color: ${(props) => props.theme.text};
+      color: ${(props) => props.theme.accent};
+    }
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    align-items: center;
+  }
+
+  .containerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .containerTitle .text {
@@ -61,7 +98,7 @@ const HomeStyle = styled.div`
     color: ${(props) => props.theme.text};
     border: none;
     border-radius: 28px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -83,9 +120,13 @@ const HomeStyle = styled.div`
     height: 30px;
   }
 
-  .terminal {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+  header img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 70px;
+    padding: 4px;
+    border: 3px solid ${(props) => props.theme.accent};
   }
 
   main {
@@ -97,19 +138,23 @@ const HomeStyle = styled.div`
 
   .about {
     text-align: center;
+    flex-direction: column;
+    height: 400px;
+    padding-top: 10%;
+    margin-bottom: 10%;
   }
 
   .about h2 {
     color: ${(props) => props.theme.accent};
-    font-size: 60px;
-    font-weight: 700;
+    font-size: 3.2rem;
+    font-weight: 400;
     margin: 0;
-    padding: 0;
+    padding-bottom: 25px;
   }
 
   .about .aboutContent {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 768px) {
@@ -117,19 +162,12 @@ const HomeStyle = styled.div`
     }
   }
 
-  .about .aboutContent img {
-    width: 400px;
-    border-radius: 50%;
-    margin-right: 70px;
-    padding: 3px;
-    border: 3px solid ${(props) => props.theme.accent};
-  }
-
   .about p {
     color: ${(props) => props.theme.secundaryText};
     font-size: 25px;
-    text-align: justify;
-    width: 85%;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
   }
 
   .skills {
@@ -149,7 +187,7 @@ const HomeStyle = styled.div`
 
   .skills h2 {
     color: ${(props) => props.theme.accent};
-    font-size: 60px;
+    font-size: 3.2rem;
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -158,7 +196,7 @@ const HomeStyle = styled.div`
   .skills .containerSkills {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 5%;
@@ -175,7 +213,7 @@ const HomeStyle = styled.div`
 
   .projects h2 {
     color: ${(props) => props.theme.accent};
-    font-size: 60px;
+    font-size: 3.2rem;
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -184,13 +222,13 @@ const HomeStyle = styled.div`
   footer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 15%;
     background-color: ${(props) => props.theme.backgroundFooter};
     padding: 10px;
     width: 100%;
-    height: 300px;
+    height: 150px;
   }
 
   .linksOnpage {
@@ -223,6 +261,7 @@ const HomeStyle = styled.div`
     justify-content: space-around;
     list-style: none;
     padding: 0;
+    margin-top: 10px;
   }
 
   .socialMedia a {
@@ -240,7 +279,7 @@ const HomeStyle = styled.div`
   .copyRight {
     color: ${(props) => props.theme.secundaryText};
     font-size: 20px;
-    margin-bottom: 30px;
+    padding-top: 20px;
   }
 
   @media (max-width: 768px) {

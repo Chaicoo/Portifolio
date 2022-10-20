@@ -20,7 +20,6 @@ import {
   FaFigma,
   SiJavascript,
 } from "react-icons/all";
-import Terminal from "./components/Terminal";
 import Button from "./components/Button";
 import Skill from "./components/Skill";
 import AnchorLink from "react-anchor-link-smooth-scroll-v2";
@@ -49,17 +48,26 @@ function Home() {
       <HomeStyle>
         <div className="container">
           <GlobalStyles />
-          <header id="header" className="limitWidth">
-            <div className="containerTitle">
-              <h1>
+          <nav>
+            <div className="navbar">
+              <h2>
                 Francisco<span className="titleSecondary">.DEV</span>
                 <button className="buttonTheme" onClick={toggleTheme}>
                   {icon}
                 </button>
-              </h1>
+              </h2>
+              <a href="/projects">Projetos</a>
+            </div>
+          </nav>
+
+          <header id="header" className="limitWidth">
+            <div className="containerTitle">
+              <h1>Francisco Gabriel</h1>
+              <h2>Dev Front-End Jr</h2>
               <p className="text">
-                Olá, me chamo Francisco Gabriel e sou desenvolvedor Jr
-                Front-end.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi, quod itaque aut ducimus fugit maxime numquam minus
+                quos nesciunt ab molestiae.
               </p>
               <div className="containerButtons">
                 <AnchorLink href="#about" className="buttonLink">
@@ -68,9 +76,7 @@ function Home() {
                 <Button className="button">Baixar currículo</Button>
               </div>
             </div>
-            <div className="terminal">
-              <Terminal />
-            </div>
+            <img src="https://github.com/Chaicoo.png" />
           </header>
 
           <main>
@@ -78,16 +84,14 @@ function Home() {
               <h2 className="title" data-aos="zoom-in">
                 Sobre mim
               </h2>
-              <div className="aboutContent">
-                <img
-                  src="https://github.com/Chaicoo.png"
-                  data-aos="fade-right"
-                />
-                <p className="text" data-aos="fade-left">
+              <div className="aboutContent" data-aos="zoom-in">
+                <p className="text">
                   Tenho 20 anos, e estudo tecnologia desde os 15, quando
                   ingressei num Instituo Federal, onde fiz um curso técnico em
                   redes de computadores e resolvi seguir a carreia de DEV,
                   atualmente faço o curso de Bacharel em Ciência da Computação.
+                </p>
+                <p>
                   Sou apaixonado por tecnologia e programação, sempre buscando
                   aprender mais e mais. Atualmente estou estudando ReactJS e me
                   especializando no desenvovimento Front-end.
@@ -116,7 +120,7 @@ function Home() {
             </div>
           </main>
           <footer>
-            <ul className="linksOnpage">
+            {/*<ul className="linksOnpage">
               <li>
                 <AnchorLink href="#root">Início</AnchorLink>
               </li>
@@ -129,7 +133,7 @@ function Home() {
               <li>
                 <AnchorLink href="#projects">Projetos</AnchorLink>
               </li>
-            </ul>
+            </ul>*/}
 
             <div className="socialMedia">
               <a

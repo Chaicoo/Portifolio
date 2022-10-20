@@ -8,7 +8,7 @@ const ButtonStyle = styled.div`
     color: ${(props) => props.theme.accent};
     cursor: pointer;
     font-size: 1.2rem;
-    padding: 10px 20px;
+    padding: 5px 20px;
     transition: all 0.3s ease;
   }
 
